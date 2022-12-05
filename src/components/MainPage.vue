@@ -92,6 +92,55 @@
         view all projects
       </div>
     </section>
+    <section class="sec5">
+      <div class="row text-center d-flex flex-column align-items-center mt-5 p-5">
+        <div class="col-12 text-capitalize fs-4">Our core values</div>
+        <div class="line-y col-2 my-3"></div>
+        <div class="col-8 lh-lg">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
+          adipisci in blanditiis est temporibus autem iusto ea sapiente.
+        </div>
+      </div>
+      <div class="row row-cols-6 justify-content-center">
+        <div
+          class="card2 col rounded-4 m-3
+          d-flex flex-column align-items-center pt-4"
+          v-for="element2 in arrCard2" :key="element2"
+        >
+          <div class="icon2 p-2 fs-1 rounded-circle
+          d-flex align-items-center justify-content-center text-white"
+          style="width: 80px; height: 80px;"
+          :style="`background-color: ${element2.bgColor}`">
+            <font-awesome-icon :icon="element2.icon"/>
+          </div>
+          <div class="fs-4 text-capitalize my-2">{{ element2.title }}</div>
+          <div class="border border-dark col-1"></div>
+          <div class="text-center col-10 mt-3">
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit
+            nulla cupiditate.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec6 text-white">
+      <div class="row text-center d-flex flex-column align-items-center p-5">
+        <div class="col-12 text-capitalize fs-4">Our home owners say</div>
+        <div class="line-y col-2 my-3"></div>
+        <div class="col-2">
+          <img src="../images/home-testimonial-113165296.jpg" alt="" class="rounded-circle my-3">
+        </div>
+        <div class="col-6 lh-base fw-semibold cit gy-3">
+          <i>
+            "No man but feels more of a man in the world if he have but a bit of ground
+            that he can call his own. However small it is on the surface, it is four thousand
+            miles deep; and that is a very handsome property."
+          </i>
+        </div>
+        <div class="col-4 text-uppercase fw-bold py-4">Harry Smith - New Home Owner</div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -156,6 +205,28 @@ export default {
         {
           name: 'project-3',
           imgUrl: imgProject3,
+        },
+      ],
+      arrCard2: [
+        {
+          icon: 'fa-solid fa-house',
+          title: 'great services',
+          bgColor: '#4ea4a5;',
+        },
+        {
+          icon: 'fa-solid fa-gear',
+          title: 'highest standarts',
+          bgColor: '#045287;',
+        },
+        {
+          icon: 'fa-solid fa-users',
+          title: 'professional team',
+          bgColor: '#fe6f1d;',
+        },
+        {
+          icon: 'fa-regular fa-lightbulb',
+          title: 'creative solutions',
+          bgColor: '#a7cf47;',
         },
       ],
     };
@@ -236,7 +307,26 @@ $my-lightgrey: #f0ede6;
 
 .sec3{
   background-image: url('../images/home-244125289.jpg');
-  height: 40vh;
+  height: 50vh;
 }
 
+.sec5{
+  background-color: $my-lightgrey;
+}
+
+.card2{
+  width: 300px;
+  height: 300px;
+}
+
+.sec6{
+  height: 70vh;
+  background-image: url('../images/home-parallax-144609983.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cit{
+  word-spacing: 5px;
+}
 </style>
