@@ -92,7 +92,7 @@
         view all projects
       </div>
     </section>
-    <section class="sec5">
+    <section class="sec5 pb-5">
       <div class="row text-center d-flex flex-column align-items-center mt-5 p-5">
         <div class="col-12 text-capitalize fs-4">Our core values</div>
         <div class="line-y col-2 my-3"></div>
@@ -141,6 +141,43 @@
         <div class="col-4 text-uppercase fw-bold py-4">Harry Smith - New Home Owner</div>
       </div>
     </section>
+    <div class="sec7 py-3">
+      <div class="row text-center d-flex flex-column align-items-center p-5">
+        <div class="col-12 text-capitalize fs-4">Last News</div>
+        <div class="line-y col-2 my-3"></div>
+        <div class="col-8 lh-lg">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
+          adipisci in blanditiis est temporibus autem iusto ea sapiente.
+        </div>
+      </div>
+      <div class="row row-cols-4 justify-content-center">
+        <div
+          class="col mx-2 d-flex flex-column align-items-center justify-content-center
+          bg-white"
+          v-for="element3 in arrNews" :key="element3"
+        >
+          <img
+            :src="element3.imgNewsUrl"
+            alt="news"
+            style="height: 100%; width: 100%;"
+          >
+          <div class="col-11 fs-5 text-capitalize p-2">
+            {{ element3.title }}
+          </div>
+          <div class="col-11 p-2">
+            Technology is here to say lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
+            adipisci in blanditiis est temporibus autem iusto ea sapiente.
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center">
+        <div class="border border-white border-3" style="width: 20%; height: 0"></div>
+        <div class="col-3 text-uppercase text-center p-5 mt-3">view all articles</div>
+        <div class="border border-white border-3" style="width: 20%; height: 0"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -148,6 +185,10 @@
 import imgProject2 from '../images/project2-featured-15013609-400x400.jpg';
 import imgProject1 from '../images/project1-featured-294276386-400x400.jpg';
 import imgProject3 from '../images/project3-featured-189023420-400x400.jpg';
+
+import imgNews1 from '../images/blog-post-134132600-400x241.jpg';
+import imgNews2 from '../images/blog-post-92486644-400x241.jpg';
+import imgNews3 from '../images/blog-post-332773904-400x241.jpg';
 
 export default {
   name: 'MainPage',
@@ -227,6 +268,20 @@ export default {
           icon: 'fa-regular fa-lightbulb',
           title: 'creative solutions',
           bgColor: '#a7cf47;',
+        },
+      ],
+      arrNews: [
+        {
+          imgNewsUrl: imgNews1,
+          title: 'redeveloping floridas remote southern coast',
+        },
+        {
+          imgNewsUrl: imgNews2,
+          title: 'how we manage large constructions projects',
+        },
+        {
+          imgNewsUrl: imgNews3,
+          title: 'future proofing a modern home',
         },
       ],
     };
@@ -310,7 +365,7 @@ $my-lightgrey: #f0ede6;
   height: 50vh;
 }
 
-.sec5{
+.sec5, .sec7{
   background-color: $my-lightgrey;
 }
 
