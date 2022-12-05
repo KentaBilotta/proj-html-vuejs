@@ -17,7 +17,7 @@
       </div>
     </section>
     <div class="row">
-      <div class=" col-12 bg-warning text-center position-relative" style="padding: 2rem;">
+      <div class=" col-12 bg-warning text-center position-relative" style="padding: 2.5rem;">
         <div class="text-capitalize fs-4">Do you have a construction project we can help with?</div>
         <div class="button4 text-uppercase p-2
         position-absolute top-100 start-50 translate-middle">get a free quote</div>
@@ -27,7 +27,7 @@
       <div class="row text-center d-flex flex-column align-items-center mt-5 p-5">
         <div class="col-12 text-capitalize fs-4">specialist in modern construction</div>
         <div class="line-y col-2 my-3"></div>
-        <div class="col-8">
+        <div class="col-8 lh-lg">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
           adipisci in blanditiis est temporibus autem iusto ea sapiente.
@@ -52,10 +52,54 @@
         </div>
       </div>
     </section>
+    <section class="sec3">
+      <div class="row d-flex justify-content-center align-items-center" style="height: 100%">
+        <div
+          class="col-2 text-warning fs-2 d-flex flex-column align-items-center text-center
+          p-3"
+          v-for="data in arrNumbers" :key="data"
+        >
+          <font-awesome-icon :icon="data.icon" />
+          <div class="col-12 ">{{ data.number }}</div>
+          <div class="text-white text-uppercase" style="font-size: 0.8rem;">
+            {{ data.text }}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec4 d-flex flex-column align-items-center">
+      <div class="row text-center d-flex flex-column align-items-center mt-5 p-5">
+        <div class="col-12 text-capitalize fs-4">Explore recent work</div>
+        <div class="line-y col-2 my-3"></div>
+        <div class="col-8 lh-lg">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
+          adipisci in blanditiis est temporibus autem iusto ea sapiente.
+        </div>
+      </div>
+      <div class="row row-cols-4 justify-content-center my-3">
+        <div
+          class="mx-5 my-3 d-flex align-items-center justify-content-center"
+          v-for="project in arrProjects" :key="project"
+        >
+          <img :src="project.imgUrl" :alt="project.name">
+        </div>
+      </div>
+      <div
+        class="col-2 text-uppercase text-secondary p-3 m-5 text-center"
+        style="cursor: pointer;"
+      >
+        view all projects
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import imgProject2 from '../images/project2-featured-15013609-400x400.jpg';
+import imgProject1 from '../images/project1-featured-294276386-400x400.jpg';
+import imgProject3 from '../images/project3-featured-189023420-400x400.jpg';
+
 export default {
   name: 'MainPage',
   data() {
@@ -76,6 +120,42 @@ export default {
         {
           icon: 'fa-solid fa-truck',
           title: 'exclusive',
+        },
+      ],
+      arrNumbers: [
+        {
+          icon: 'fa-solid fa-suitcase',
+          number: '3534',
+          text: 'planning applications',
+        },
+        {
+          icon: 'fa-regular fa-building',
+          number: '896',
+          text: 'completed projects',
+        },
+        {
+          icon: 'fa-solid fa-users',
+          number: '172',
+          text: 'trained professionals',
+        },
+        {
+          icon: 'fa-solid fa-globe',
+          number: '19',
+          text: 'international offices',
+        },
+      ],
+      arrProjects: [
+        {
+          name: 'project-2',
+          imgUrl: imgProject2,
+        },
+        {
+          name: 'project-1',
+          imgUrl: imgProject1,
+        },
+        {
+          name: 'project-3',
+          imgUrl: imgProject3,
         },
       ],
     };
@@ -152,6 +232,11 @@ $my-lightgrey: #f0ede6;
 
 .card1{
   background-color: $my-lightgrey;
+}
+
+.sec3{
+  background-image: url('../images/home-244125289.jpg');
+  height: 40vh;
 }
 
 </style>
