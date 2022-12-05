@@ -1,8 +1,10 @@
 <template>
   <div>
-    <HeaderPage />
-    <MainPage />
-    <FooterPage />
+    <div class="fw-light">
+      <HeaderPage />
+      <MainPage />
+      <FooterPage />
+    </div>
   </div>
 </template>
 
