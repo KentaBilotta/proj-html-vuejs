@@ -33,21 +33,44 @@
           adipisci in blanditiis est temporibus autem iusto ea sapiente.
         </div>
       </div>
-      <div class="row row-cols-5 justify-content-center">
+      <div class="row justify-content-center">
         <div
-          class="card1 col rounded-4 m-3
-          d-flex flex-column align-items-center"
-          v-for="element in arrCard1" :key="element"
+          class="col-2 card-cont card1 m-3"
+          v-for="element in arrCard1"
+          :key="element"
         >
-          <div class="icon border border-dark p-2 fs-4 rounded-circle
-          d-flex align-items-center justify-content-center mt-3">
-            <font-awesome-icon :icon="element.icon"/>
-          </div>
-          <div class="fs-4 text-capitalize my-2">{{ element.title }}</div>
-          <div class="text-center col-10">
-            Lorem ipsum dolor sit amet
-            consectetur adipisicing elit
-            nulla cupiditate.
+          <div class="card-inner">
+            <div
+              class="card1-front rounded-4 d-flex flex-column align-items-center"
+            >
+              <div
+                class="icon border border-dark p-2 fs-4 rounded-circle
+                d-flex align-items-center justify-content-center mt-3"
+              >
+                <font-awesome-icon :icon="element.icon"/>
+              </div>
+              <div class="fs-4 text-capitalize my-2">{{ element.title }}</div>
+              <div class="text-center col-10">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit
+                nulla cupiditate.
+              </div>
+            </div>
+            <div class="card1-back rounded-4 d-flex flex-column align-items-center
+            justify-content-center">
+              <div class="fs-5 text-uppercase my-2 text-center">artfully crafted</div>
+              <div class="text-center col-10">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit
+                nulla cupiditate.
+              </div>
+              <div
+                class="my-2 p-2 text-uppercase back-btn-1"
+                style="width: fit-content;"
+              >
+                get a quote
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -77,12 +100,35 @@
           adipisci in blanditiis est temporibus autem iusto ea sapiente.
         </div>
       </div>
-      <div class="row row-cols-4 justify-content-center my-3">
+      <div class="row justify-content-center">
         <div
-          class="mx-5 my-3 d-flex align-items-center justify-content-center"
-          v-for="project in arrProjects" :key="project"
+          class="card2 border border-dark card-cont m-3"
+          style="width: 300px; height: 300px;"
+          v-for="project in arrProjects"
+          :key="project"
         >
-          <img :src="project.imgUrl" :alt="project.name">
+          <div class="card-inner">
+            <div class="card2-front">
+              <img
+                :src="project.imgUrl"
+                :alt="project"
+                class="h-100 w-100"
+              >
+            </div>
+            <div class="card2-back d-flex flex-column align-items-center justify-content-center
+            text-white">
+              <div class="text-warning d-flex">
+                <div class="icon bg-white p-2 rounded-circle fs-4 text-center mx-2">
+                  <font-awesome-icon icon="fa-solid fa-link" />
+                </div>
+                <div class="icon bg-white p-2 rounded-circle fs-4 text-center mx-2">
+                  <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+                </div>
+              </div>
+              <div class="fs-4 text-capitalize my-2">florida heath facility</div>
+              <div>Commercial</div>
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -104,22 +150,43 @@
       </div>
       <div class="row row-cols-6 justify-content-center">
         <div
-          class="card2 col rounded-4 m-3
-          d-flex flex-column align-items-center pt-4"
+          class="card-cont"
+          style="height: 300px;"
           v-for="element2 in arrCard2" :key="element2"
         >
-          <div class="icon2 p-2 fs-1 rounded-circle
-          d-flex align-items-center justify-content-center text-white"
-          style="width: 80px; height: 80px;"
-          :style="`background-color: ${element2.bgColor}`">
-            <font-awesome-icon :icon="element2.icon"/>
-          </div>
-          <div class="fs-4 text-capitalize my-2">{{ element2.title }}</div>
-          <div class="border border-dark col-1"></div>
-          <div class="text-center col-10 mt-3">
-            Lorem ipsum dolor sit amet
-            consectetur adipisicing elit
-            nulla cupiditate.
+          <div class="card-inner d-flex justify-content-center">
+            <div class="card4-front col rounded-4 m-3 d-flex flex-column align-items-center pt-4">
+              <div class="icon2 p-2 fs-1 rounded-circle
+                d-flex align-items-center justify-content-center text-white"
+                  style="width: 80px; height: 80px;"
+                  :style="`background-color: ${element2.bgColor}`"
+                >
+                  <font-awesome-icon :icon="element2.icon"/>
+              </div>
+              <div class="fs-4 text-capitalize my-2 text-center">{{ element2.title }}</div>
+              <div class="border border-dark col-1"></div>
+              <div class="text-center col-10 mt-3">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing.
+              </div>
+            </div>
+            <div class="card4-back col rounded-4 m-3 d-flex flex-column align-items-center pt-4">
+              <div class="icon2 p-2 fs-1 rounded-circle bg-warning
+                d-flex align-items-center justify-content-center text-white"
+                style="width: 80px; height: 80px;"
+                >
+                  <font-awesome-icon :icon="element2.icon"/>
+              </div>
+              <div class="fs-4 text-capitalize my-2
+              text-center text-waring">
+                {{ element2.title }}
+              </div>
+              <div class="border border-dark col-1"></div>
+              <div class="text-center col-10 mt-3">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -151,30 +218,84 @@
           adipisci in blanditiis est temporibus autem iusto ea sapiente.
         </div>
       </div>
-      <div class="row row-cols-4 justify-content-center">
+      <div class="row justify-content-center">
         <div
-          class="col mx-2 d-flex flex-column align-items-center justify-content-center
-          bg-white"
-          v-for="element3 in arrNews" :key="element3"
+          class="card-cont m-3"
+          style="width: 300px; height: 550px;"
+          v-for="news in arrNews"
+          :key="news"
         >
-          <img
-            :src="element3.imgNewsUrl"
-            alt="news"
-            style="height: 100%; width: 100%;"
-          >
-          <div class="col-11 fs-5 text-capitalize p-2">
-            {{ element3.title }}
-          </div>
-          <div class="col-11 p-2">
-            Technology is here to say lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
-            adipisci in blanditiis est temporibus autem iusto ea sapiente.
+          <div class="card-inner">
+            <div class="bg-white card3-front" style="width: 300px;">
+              <img
+                :src="news.imgNewsUrl"
+                :alt="news"
+                class=""
+                style="width: 300px; object-fit: cover;"
+              >
+              <div class="fs-5 text-capitalize p-2">
+                {{ news.title }}
+              </div>
+              <div class="p-2" style="font-size: 0.8rem;">
+                December 7th, 2015
+              </div>
+              <div class="border border-secondary my-3 m-auto" style="width: 95%;"></div>
+              <div class="lh-lg my-2 p-2">
+                Technology is Here to Say
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolor placeat ducimus vero tempora molestiae
+                vel neque laborum natus tempore facilis quos aperiam.
+                Placeat ducimus vero.
+                </div>
+              </div>
+            <div class="bg-white card3-back" style="width: 300px;">
+              <div
+                class="bg-warning d-flex flex-column align-items-center
+                justify-content-center"
+                style="width: 300px; height: 180px; object-fit: cover;"
+              >
+                <div class="text-warning d-flex">
+                  <div class="icon bg-white p-2 rounded-circle fs-4 text-center mx-2">
+                    <font-awesome-icon icon="fa-solid fa-link" />
+                  </div>
+                  <div class="icon bg-white p-2 rounded-circle fs-4 text-center mx-2">
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+                  </div>
+                </div>
+                <div class="fs-5 text-capitalize py-2 text-white text-center">
+                  {{ news.title }}
+                </div>
+                <div
+                 class="text-white text-center"
+                  style="font-size: 0.8rem;"
+                >Architecture, Buildings, Construction, News</div>
+              </div>
+              <div class="fs-5 text-capitalize p-2">
+                {{ news.title }}
+              </div>
+              <div class="p-2" style="font-size: 0.8rem;">
+                December 7th, 2015
+              </div>
+              <div class="border border-secondary my-3 m-auto" style="width: 95%;"></div>
+              <div class="lh-lg my-2 p-2">
+                Technology is Here to Say
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolor placeat ducimus vero tempora molestiae
+                vel neque laborum natus tempore facilis quos aperiam.
+                Placeat ducimus vero.
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="row align-items-center justify-content-center">
         <div class="border border-white border-3" style="width: 20%; height: 0"></div>
-        <div class="col-3 text-uppercase text-center p-5 mt-3">view all articles</div>
+        <div
+          class="col-3 text-uppercase text-center p-5 mt-3"
+          style="cursor: pointer"
+        >
+          view all articles
+        </div>
         <div class="border border-white border-3" style="width: 20%; height: 0"></div>
       </div>
     </section>
@@ -404,7 +525,70 @@ $my-lightgrey: #f0ede6;
 
 .card1{
   width: 300px;
-  height: 200px;
+  height: 250px;
+}
+
+.card-cont{
+  position: relative;
+}
+
+.card-cont:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card-inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+}
+
+.card1-front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $my-lightgrey;
+  backface-visibility: hidden;
+}
+
+.card1-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background-color: $my-yellow;
+}
+
+.card2-front, .card3-front, .card4-front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card2-back, .card3-back, .card4-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.card2-back, .card3-back{
+  background-color: $my-yellow;
+}
+
+.back-btn-1{
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.news{
+  margin-left: -0.80rem;
 }
 
 .icon{
@@ -416,10 +600,6 @@ $my-lightgrey: #f0ede6;
   height: 70vh;
 }
 
-.card1{
-  background-color: $my-lightgrey;
-}
-
 .sec3{
   background-image: url('../images/home-244125289.jpg');
   height: 50vh;
@@ -427,11 +607,6 @@ $my-lightgrey: #f0ede6;
 
 .sec5, .sec7{
   background-color: $my-lightgrey;
-}
-
-.card2{
-  width: 300px;
-  height: 300px;
 }
 
 .sec6{
