@@ -189,24 +189,11 @@
         </div>
       </div>
       <div class="row justify-content-center m-3">
-        <div class="col-2 d-flex align-items-center justify-content-center">
-          <img src="../images/home-logo11-219096700-320x202.png" alt=""
-          style="width: 80%;height: 80%;">
-        </div>
-        <div class="col-2 d-flex align-items-center justify-content-center">
-          <img src="../images/home-logo10-219096700-320x202.png" alt=""
-          style="width: 80%;height: 80%;">
-        </div>
-        <div class="col-2 d-flex align-items-center justify-content-center">
-          <img src="../images/home-logo2-219096700-320x202.png" alt=""
-          style="width: 80%;height: 80%;">
-        </div>
-        <div class="col-2 d-flex align-items-center justify-content-center">
-          <img src="../images/home-logo1-219096700-320x202.png" alt=""
-          style="width: 80%;height: 80%;">
-        </div>
-        <div class="col-2 d-flex align-items-center justify-content-center">
-          <img src="../images/home-logo9-219096700-320x202.png" alt=""
+        <div
+          class="col-2 d-flex align-items-center justify-content-center"
+          v-for="partner in arrPartners" :key="partner"
+        >
+          <img :src="partner.imgPartner" :alt="partner"
           style="width: 80%;height: 80%;">
         </div>
       </div>
@@ -239,6 +226,12 @@ import imgProject3 from '../images/project3-featured-189023420-400x400.jpg';
 import imgNews1 from '../images/blog-post-134132600-400x241.jpg';
 import imgNews2 from '../images/blog-post-92486644-400x241.jpg';
 import imgNews3 from '../images/blog-post-332773904-400x241.jpg';
+
+import partner1 from '../images/home-logo11-219096700-320x202.png';
+import partner2 from '../images/home-logo10-219096700-320x202.png';
+import partner3 from '../images/home-logo2-219096700-320x202.png';
+import partner4 from '../images/home-logo1-219096700-320x202.png';
+import partner5 from '../images/home-logo9-219096700-320x202.png';
 
 export default {
   name: 'MainPage',
@@ -332,6 +325,23 @@ export default {
         {
           imgNewsUrl: imgNews3,
           title: 'future proofing a modern home',
+        },
+      ],
+      arrPartners: [
+        {
+          imgPartner: partner1,
+        },
+        {
+          imgPartner: partner2,
+        },
+        {
+          imgPartner: partner3,
+        },
+        {
+          imgPartner: partner4,
+        },
+        {
+          imgPartner: partner5,
         },
       ],
     };
