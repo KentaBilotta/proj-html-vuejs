@@ -141,7 +141,7 @@
         <div class="col-4 text-uppercase fw-bold py-4">Harry Smith - New Home Owner</div>
       </div>
     </section>
-    <div class="sec7 py-3">
+    <section class="sec7 py-5">
       <div class="row text-center d-flex flex-column align-items-center p-5">
         <div class="col-12 text-capitalize fs-4">Last News</div>
         <div class="line-y col-2 my-3"></div>
@@ -177,7 +177,57 @@
         <div class="col-3 text-uppercase text-center p-5 mt-3">view all articles</div>
         <div class="border border-white border-3" style="width: 20%; height: 0"></div>
       </div>
-    </div>
+    </section>
+    <section class="sec8 mb-5">
+      <div class="row text-center d-flex flex-column align-items-center mt-5 p-5">
+        <div class="col-12 text-capitalize fs-4">Trusted partners</div>
+        <div class="line-y col-2 my-3"></div>
+        <div class="col-8 lh-lg">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
+          adipisci in blanditiis est temporibus autem iusto ea sapiente.
+        </div>
+      </div>
+      <div class="row justify-content-center m-3">
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img src="../images/home-logo11-219096700-320x202.png" alt=""
+          style="width: 80%;height: 80%;">
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img src="../images/home-logo10-219096700-320x202.png" alt=""
+          style="width: 80%;height: 80%;">
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img src="../images/home-logo2-219096700-320x202.png" alt=""
+          style="width: 80%;height: 80%;">
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img src="../images/home-logo1-219096700-320x202.png" alt=""
+          style="width: 80%;height: 80%;">
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img src="../images/home-logo9-219096700-320x202.png" alt=""
+          style="width: 80%;height: 80%;">
+        </div>
+      </div>
+    </section>
+    <section class="sec9 text-white">
+      <div class="row justify-content-center h-100 align-items-center">
+        <div class="col-6">
+          <div class="text-capitalize fs-4">Building inspiring spaces</div>
+          <div class="line-y col-2 my-3"></div>
+          <div class="lh-lg col-10">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis quasi veritatis eius et asperiores culpa labore dolor,
+            adipisci in blanditis.
+          </div>
+        </div>
+        <di class="col-3 d-flex flex-column align-items-center">
+          <div class="button5 p-2 text-uppercase">get a free quote</div>
+          <div class="p-2" style="font-size: 0.8rem;">Only takes a few seconds!</div>
+        </di>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -383,5 +433,23 @@ $my-lightgrey: #f0ede6;
 
 .cit{
   word-spacing: 5px;
+}
+
+.sec9{
+  height: 50vh;
+  background-image: url('../images/about-call-to-action-57862405.jpg');
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.button5{
+  background-color: $my-yellow;
+  width: fit-content;
+  color: $my-grey;
+  &:hover{
+    background-color: $my-grey;
+    color: $my-yellow;
+    cursor: pointer;
+  }
 }
 </style>
