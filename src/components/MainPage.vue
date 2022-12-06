@@ -178,7 +178,7 @@
                   <font-awesome-icon :icon="element2.icon"/>
               </div>
               <div class="fs-4 text-capitalize my-2
-              text-center text-waring">
+              text-center text-warning">
                 {{ element2.title }}
               </div>
               <div class="border border-dark col-1"></div>
