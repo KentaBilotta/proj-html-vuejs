@@ -102,7 +102,7 @@
       </div>
       <div class="row justify-content-center">
         <div
-          class="card2 border border-dark card-cont m-3"
+          class="card2 card-cont m-3"
           style="width: 300px; height: 300px;"
           v-for="project in arrProjects"
           :key="project"
